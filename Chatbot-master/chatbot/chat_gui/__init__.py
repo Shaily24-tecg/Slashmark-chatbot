@@ -187,3 +187,5 @@ class ChatGUI:
         Helper method to add the newline in the InputBox
         """
         self.user_input_box.insert(END, "\n")
+
+
