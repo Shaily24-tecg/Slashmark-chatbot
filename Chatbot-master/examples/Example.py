@@ -15,7 +15,7 @@ def who_is(session, query):
                 return wikipedia.summary(new_query)
             except Exception:
                 pass
-    return "I don't know about "+query
+    return f"Sorry, I couldn't find any information about '{query}'. Please try another topic."
 
 
 first_question = "Welcome! 👋 I am your AI Chatbot. Ask me anything."
