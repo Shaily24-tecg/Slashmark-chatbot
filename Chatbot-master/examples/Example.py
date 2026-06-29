@@ -18,6 +18,7 @@ def who_is(session, query):
     return f"Sorry, I couldn't find any information about '{query}'. Please try another topic."
 
 
+
 first_question = "Welcome! 👋 I am your AI Chatbot. Ask me anything."
 chat = Chat(os.path.join(os.path.dirname(os.path.abspath(__file__)), "Example.template"))
 chat.converse(first_question)

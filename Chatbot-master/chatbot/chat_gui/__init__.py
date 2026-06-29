@@ -26,7 +26,7 @@ class ChatGUI:
 
         # initialize tkinter start
         self.root = Tk()
-        self.root.title("Sample ChatBot")
+        self.root.title("Slashmark AI Chatbot")
         self.root.protocol("WM_DELETE_WINDOW", self.close_handler)
         # this removes the maximize
         self.root.resizable(0, 0)
