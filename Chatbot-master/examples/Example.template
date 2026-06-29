@@ -1,13 +1,91 @@
 {% block %}
-    {% client %}(Do you know about|what is|who is|tell me about) (?P<query1>.*)(,| and | \& )(?P<query2>.*){% endclient %}
+    {% client %}(hi|hello|hey|hii|hola|good morning|good afternoon|good evening){% endclient %}
     {% response %}
-           {% chat %1 %query1 %}
-           ------------------------------------
-           {% chat %1 %query2 %}
+Hello! 👋
+Welcome to the AI Chatbot.
+How can I help you today?
     {% endresponse %}
 {% endblock %}
+
 {% block %}
-    {% client %}(Do you know about|what is|who is|tell me about) (?P<query>.*){% endclient %}
-    {% response %}{% call whoIs: %query %}{% endresponse %}
+    {% client %}(how are you|how are you doing){% endclient %}
+    {% response %}
+I'm doing great! 😊
+Thank you for asking.
+How can I assist you today?
+    {% endresponse %}
 {% endblock %}
 
+{% block %}
+    {% client %}(who are you|what are you){% endclient %}
+    {% response %}
+I am an AI Chatbot developed using Python.
+I can answer questions, search Wikipedia and have simple conversations.
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(what is your name|your name){% endclient %}
+    {% response %}
+My name is Slashmark AI Chatbot. 😊
+Nice to meet you!
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(what can you do|help|features){% endclient %}
+    {% response %}
+Here are some things I can do:
+
+• Answer general questions
+• Search information from Wikipedia
+• Talk with you
+• Answer "Who is..." and "What is..." questions
+
+Try asking:
+Who is Virat Kohli?
+What is Artificial Intelligence?
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(thank you|thanks|thx){% endclient %}
+    {% response %}
+You're most welcome! 😊
+I'm always happy to help.
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(bye|goodbye|see you|exit|quit){% endclient %}
+    {% response %}
+Goodbye! 👋
+Have a wonderful day.
+Take care!
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(who created you|who made you|creator|developer){% endclient %}
+    {% response %}
+I was developed as a Python chatbot project with Wikipedia integration.
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(Do you know about|what is|who is|tell me about) (?P<query1>.*)(,| and | \& )(?P<query2>.*){% endclient %}
+    {% response %}
+{% chat %1 %query1 %}
+
+----------------------------------------
+
+{% chat %1 %query2 %}
+    {% endresponse %}
+{% endblock %}
+
+{% block %}
+    {% client %}(Do you know about|what is|who is|tell me about) (?P<query>.*){% endclient %}
+    {% response %}
+{% call whoIs: %query %}
+    {% endresponse %}
+{% endblock %}
