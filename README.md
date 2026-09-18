@@ -1,4 +1,3 @@
-# Slashmark-chatbot
 # Slashmark Chatbot
 
 ## Overview
